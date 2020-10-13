@@ -12,6 +12,29 @@ module.exports = {
       }
     });
   },
+  postSite: (data, callback) => {
+    const { siteName, siteArea, siteState, elevation, temperature, weather, distance } = data;
+    const queryStr = `INSERT INTO sites(siteName, siteArea, siteState, elevation, temperature, weather, distance) VALUES('${siteName}', '${siteArea}', '${siteState}', ${elevation}, ${temperature},'${weather}', ${distance})`
+    db.query(queryStr, (err, results) => {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, results);
+      }
+    })
+  },
+  updateSite: ({ id }, data, callback) => {
+    const { siteName, siteArea, siteState, elevation, temperature, weather, distance } = data;
+    const queryStr =
+      `UPDATE sites SET siteName = '${siteName}', siteArea = '${siteArea}', siteState = '${siteState}', elevation = ${elevation}, temperature = ${temperature}, weather = '${weather}', distance = '${distance}' WHERE id=${id}`;
+    db.query(queryStr, (err, result) => {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, result);
+      }
+    });
+  },
   getActivities: (req, callback) => {
     const { id } = req.params;
     const queryStr = `SELECT * FROM activities WHERE id=${id}`;

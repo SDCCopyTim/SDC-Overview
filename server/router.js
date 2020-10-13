@@ -4,7 +4,13 @@ const controllers = require('./controllers.js');
 //gotta create CRUD operations
 router
   .route('/sites/:id')
-  .get(controllers.getSite);
+  .get(controllers.getSite)
+  .put(controllers.updateSite)
+
+router
+  .route('/sites')
+  .post(controllers.postSite)
+
 
 router
   .route('/activities/:id')

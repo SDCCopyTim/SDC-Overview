@@ -10,6 +10,24 @@ module.exports = {
       }
     });
   },
+  postSite: (req, res) => {
+    dbHelpers.postSite(req.body, (err, result) => {
+      if (err) {
+        res.status(404).send(err)
+      } else {
+        res.status(200).send('SUCCESSFUL POST')
+      }
+    })
+  },
+  updateSite: (req, res) => {
+    dbHelpers.updateSite(req.params, req.body, (err, result) => {
+      if (err) {
+        res.status(404).send(err)
+      } else {
+        res.status(200).send('SUCCESSFUL UPDATE')
+      }
+    })
+  },
   getActivities: (req, res) => {
     dbHelpers.getActivities(req, (err, result) => {
       if (err) {
