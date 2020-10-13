@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const controllers = require('./controllers.js');
 
+//gotta create CRUD operations
 router
   .route('/sites/:id')
   .get(controllers.getSite);
