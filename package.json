@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "seed": "node database/seedActivities.js",
     "seed2": "node database/seedAttractions.js",
     "seed3": "node database/seedPhotos.js",
