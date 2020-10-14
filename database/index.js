@@ -8,6 +8,7 @@ connection.once('open', function() {
 });
 
 const sitesSchema = new mongoose.Schema({
+  id:
   siteName: String,
   siteArea: String,
   siteState: String,
