@@ -33,6 +33,8 @@
     "jest": "^26.4.2",
     "moment": "^2.29.0",
     "moment-timezone": "^0.5.31",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",

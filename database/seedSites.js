@@ -30,25 +30,19 @@ const createSite = () => {
 
 const createSites = () => {
   const sitesArr = [];
+
   for (let i = 0; i < 100; i++) {
     sitesArr.push(createSite());
   }
-  return sitesArr;
-};
 
-const insertData = () => {
-  const allData = createSites();
-  allData.forEach((item) => {
-    db.query(`INSERT INTO sites (siteName, siteArea, siteState, elevation, temperature, weather, distance) VALUES ("${item.siteName}", "${item.siteArea}", "${item.siteState}", ${item.elevation}, ${item.temperature}, "${item.weather}", ${item.distance})`, (err, result) => {
-      if (err) {
-        console.log('site seed failed');
-      } else {
-        console.log('site seed succeeded!');
-      }
-    });
+  db.Sites.insertMany(sitesArr, (err, results) => {
+    if (err) {
+      console.error(err);
+    } else {
+      db.connection.close();
+      console.log('Seed successful!');
+    }
   });
-
-  db.end();
 };
 
-insertData();
+createSites();
