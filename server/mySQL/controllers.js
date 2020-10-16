@@ -1,4 +1,4 @@
-const dbHelpers = require('../database/dbHelpers.js');
+const dbHelpers = require('../../database/mySQL/dbHelpers.js');
 
 module.exports = {
   getSite: (req, res) => {

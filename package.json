@@ -6,14 +6,17 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/mySQL/index.js",
     "mongoDB": "nodemon server/mongoDB/index.js",
-    "seed": "node database/seedActivities.js",
-    "seed2": "node database/seedAttractions.js",
-    "seed3": "node database/seedPhotos.js",
-    "seed4": "node database/seedServices.js",
-    "seed5": "node database/mongoDB/seedSites.js",
-    "seed6": "node database/seedTerrain.js"
+    "seed": "node database/mySQL/seedActivities.js",
+    "seed2": "node database/mySQL/seedAttractions.js",
+    "seed3": "node database/mySQL/seedPhotos.js",
+    "seed4": "node database/mySQL/seedServices.js",
+    "seed5": "node database/mySQL/seedSites.js",
+    "seed6": "node database/mySQL/seedTerrain.js",
+    "importSites": "mongoimport --type csv -d overviewDB -c sites --headerline --drop sites.csv",
+    "importServices": "mongoimport --type csv -d overviewDB -c services --headerline --drop services.csv",
+    "importActivities": "mongoimport --type csv -d overviewDB -c activities --headerline --drop activities.csv"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,8 @@
     "faker": "^5.1.0",
     "framer-motion": "^2.7.7",
     "jest": "^26.4.2",
+    "jquery": "^3.5.1",
+    "jquery-csv": "^1.0.11",
     "moment": "^2.29.0",
     "moment-timezone": "^0.5.31",
     "mongoose": "^5.10.9",
