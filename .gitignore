@@ -26,3 +26,6 @@ bundle.js
 
 # Database Password
 database/config.js
+
+# csv files
+*.csv
