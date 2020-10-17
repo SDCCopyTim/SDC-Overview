@@ -15,7 +15,7 @@ function writeTenMillionServices(writer, encoding, callback) {
 
       const nameOfService = ['Firewood bundle', 'Macala Orchards'];
 
-      const descriptions = ['Start your trip off right with a bundle of firewood waiting for you at your camp for your first campfire.', 'Olive orchards, vineyard, guava orchards, decorative landscape, and oak groves spread out on our 20 acres set against beautiful natural rock landscape.'];
+      const descriptions = ['Start your trip off right with a bundle of firewood waiting for you at your camp for your first campfire.', 'Olive orchards vineyard guava orchards decorative landscape and oak groves spread out on our 20 acres set against beautiful natural rock landscape.'];
 
       const priceServices = ['free', '5', '10'];
 
