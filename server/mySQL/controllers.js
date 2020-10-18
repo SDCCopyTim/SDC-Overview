@@ -28,6 +28,15 @@ module.exports = {
       }
     })
   },
+  deleteSite: (req, res) => {
+    dbHelpers.deleteSite(req.params, (err, result) => {
+      if (err) {
+        res.status(404).send(err)
+      } else {
+        res.status(200).send('SUCCESSFUL DELETE')
+      }
+    })
+  },
   getActivities: (req, res) => {
     dbHelpers.getActivities(req, (err, result) => {
       if (err) {

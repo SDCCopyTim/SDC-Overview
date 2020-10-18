@@ -35,7 +35,7 @@ function writeTenMillionSites(writer, encoding, callback) {
         precision: 0.1,
       });
 
-      const data = `${id},${siteName},${siteArea},${siteState},${elevation},${temperature},${weather},${distance}\n`;
+      const data = `${siteName},${siteArea},${siteState},${elevation},${temperature},${weather},${distance}\n`;
 
       if (i === 0) {
         writer.write(data, encoding, callback);

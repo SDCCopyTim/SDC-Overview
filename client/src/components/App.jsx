@@ -30,9 +30,9 @@ export default class App extends React.Component {
     Axios.get(`http://localhost:3003/api/sites/${id}`)
       .then((results) => {
         this.setState({
-          campsiteName: results.data[0].siteName,
-          campsiteArea: results.data[0].siteArea,
-          campsiteState: results.data[0].siteState,
+          campsiteName: results.data[0].siteName ? results.data[0].siteName : results.data[0].sitename,
+          campsiteArea: results.data[0].siteArea ? results.data[0].siteArea : results.data[0].sitearea,
+          campsiteState: results.data[0].siteState ? results.data[0].siteState : results.data[0].sitestate,
           campsiteElevation: results.data[0].elevation,
           campsiteTemperature: results.data[0].temperature,
           campsiteWeather: results.data[0].weather,
