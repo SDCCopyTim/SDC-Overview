@@ -6,6 +6,7 @@ router
   .route('/sites/:id')
   .get(controllers.getSite)
   .put(controllers.updateSite)
+  .delete(controllers.deleteSite)
 
 router
   .route('/sites')
