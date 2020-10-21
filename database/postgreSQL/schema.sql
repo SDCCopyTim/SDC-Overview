@@ -16,7 +16,7 @@ CREATE TABLE sites (
 );
 
 CREATE TABLE services (
-  id SMALLINT NOT NULL,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   description VARCHAR(255),
   price VARCHAR(255),
@@ -24,7 +24,7 @@ CREATE TABLE services (
 );
 
 CREATE TABLE activities (
-  id SMALLINT NOT NULL,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   image VARCHAR(255) NOT NULL
 );

@@ -29,3 +29,5 @@ database/config.js
 
 # csv files
 *.csv
+
+*.txt

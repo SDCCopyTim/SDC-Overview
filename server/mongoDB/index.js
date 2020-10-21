@@ -106,6 +106,4 @@ app.get('/api/attractions/:id', (req, res) => {
 });
 
 
-
-
 app.listen(port, () => console.log(`currently listening on localhost:${port}`));
