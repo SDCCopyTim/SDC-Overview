@@ -31,3 +31,7 @@ database/config.js
 *.csv
 
 *.txt
+
+
+# newrelic.js
+newrelic.js
