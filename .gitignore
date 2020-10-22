@@ -30,8 +30,8 @@ database/config.js
 # csv files
 *.csv
 
-
 *.txt
+
 
 # newrelic.js
 newrelic.js
