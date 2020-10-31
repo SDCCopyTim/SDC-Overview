@@ -6,17 +6,17 @@ let errorRate = new Counter('errors');
 
 export let options = {
   stages: [
-    { duration: '1m10s', target: 100},
-    { duration: '1m10s', target: 200},
-    { duration: '1m10s', target: 300},
-    { duration: '1m10s', target: 400},
-    { duration: '1m10s', target: 500},
-    { duration: '1m10s', target: 600},
-    { duration: '1m10s', target: 700},
-    { duration: '1m10s', target: 800},
-    { duration: '1m10s', target: 900},
-    { duration: '1m10s', target: 1000},
-    { duration: '2m10s', target: 0}
+    { duration: '45s', target: 100},
+    { duration: '45s', target: 200},
+    { duration: '45s', target: 300},
+    { duration: '45s', target: 400},
+    { duration: '45s', target: 500},
+    { duration: '45s', target: 600},
+    { duration: '45s', target: 700},
+    { duration: '45s', target: 800},
+    { duration: '45s', target: 900},
+    { duration: '45s', target: 1000},
+    { duration: '1m', target: 0}
   ],
   thresholds: {
     'errorRate': [

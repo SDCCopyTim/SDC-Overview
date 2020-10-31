@@ -4,6 +4,14 @@ const randomNum = (num) => {
   return Math.floor(Math.random() * num);
 }
 
+// return new Promise((resolve, reject) => {
+//   const queryStr = `SELECT * FROM sites WHERE id=${id}`;
+//   pool
+//     .query(queryStr)
+//     .then(res => resolve(res.rows))
+//     .catch(e => reject(e.stack));
+// })
+
 module.exports = {
   getSite: (id, callback) => {
     const queryStr = `SELECT * FROM sites WHERE id=${id}`;
